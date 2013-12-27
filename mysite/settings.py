@@ -36,6 +36,8 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'myapp',
+    'south',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -57,8 +59,16 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+## for SQL-lite3
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+## for MySQL
+        'ENGINE': 'django.db.backends.mysql',           # Add 'prostgresql_psycopg2', 'mysql', 'sqlite3', or 'oracle'
+        'NAME': 'wirecutter_db',
+        'USER': 'root',
+        'PASSWORD': 'Get0ut:123',
+        'HOST': '',                                     # Empty for localhost through domain sockets or '127.0.0.1' for localhost through
+        'PORT': '',                                     # Set to empty string for default.
     }
 }
 
