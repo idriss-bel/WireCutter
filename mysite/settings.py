@@ -24,6 +24,7 @@ DEBUG = True
 
 TEMPLATE_DEBUG = True
 
+
 ALLOWED_HOSTS = []
 
 
@@ -38,6 +39,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'myapp',
     'south',
+    'markdown_deux',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -71,6 +73,14 @@ DATABASES = {
         'PORT': '',                                     # Set to empty string for default.
     }
 }
+
+
+
+TEMPLATE_DIRS = ('/Users/richleung/Projects/WireCutter_proj/mysite/templates'
+    # Put strings here, like "/home/html/django_templates" or "C:/www.django/templates".
+    # Always use forward slashes, even on Windows.
+    # Don't forget to use absolute paths, not relatives paths.
+)
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
