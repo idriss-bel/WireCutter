@@ -38,6 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'myapp',
+    'polls',
     'south',
     'markdown_deux',
 )
@@ -76,11 +77,11 @@ DATABASES = {
 
 
 
-TEMPLATE_DIRS = ('/Users/richleung/Projects/WireCutter_proj/mysite/templates'
+#TEMPLATE_DIRS = ('/Users/richleung/Projects/WireCutter_proj/mysite/templates')
+TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
     # Put strings here, like "/home/html/django_templates" or "C:/www.django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relatives paths.
-)
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
